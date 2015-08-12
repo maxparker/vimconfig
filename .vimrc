@@ -1,25 +1,27 @@
+set nocompatible
+filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
-" My Bundle
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'fholgado/minibufexpl.vim'
-Bundle 'troydm/easybuffer.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-powerline'
+" My Plugins
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'fholgado/minibufexpl.vim'
+Plugin 'troydm/easybuffer.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'Lokaltog/vim-powerline'
+
+call vundle#end()
+filetype plugin indent on
 
 "--------------------------------------------------------------------------
 " General Settings
 "--------------------------------------------------------------------------
-" be iMproved
-set nocompatible
-
 " Set 256 colours
 set t_Co=256
 
@@ -203,6 +205,7 @@ let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn'
 let NERDTreeChDirMode=0
 let NERDTreeShowBookmarks=0
 let NERDTreeShowHidden=1
+let NERDTreeDirArrows=0
 
 "--------------------------------------------------------------------------
 " CtrlP
